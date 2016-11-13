@@ -1,0 +1,15 @@
+// Place all the styles related to the rules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.condition-container, .action-container {
+  display: flex;
+  flex-direction: row;
+  .form-group {
+    margin-right: .8rem;
+  }
+}
+
+#rule_name {
+  font-weight: 700;
+}

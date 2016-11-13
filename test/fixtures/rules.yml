@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  meet_all_data: 
+  meet_any_data: 
+  actions_data: 
+  order: 1
+
+two:
+  name: MyString
+  meet_all_data: 
+  meet_any_data: 
+  actions_data: 
+  order: 1

@@ -1,0 +1,14 @@
+<div class="condition-container" data-behavior="condition-container" data-index="<%= f.index %>">
+  <div class="form-group condition-inline-field">
+    <%= f.label :field, class: 'sr-only' %>
+    <%= f.select :field, rule_field_options, {prompt: true},
+                 class: 'custom-select form-control',
+                 data: {behavior: 'condition-field-selector',
+                        handle_condition_fields_path: handle_condition_fields_rules_path} %>
+  </div>
+
+  <%= path_to_rule_fields(f) %>
+
+  <%= f.hidden_field :_destroy, data: {behavior: 'mark-destroy-hidden-field'} %>
+  <%= link_to 'remove', '#', data: {behavior: 'remove-condition-link'}, class: 'float-md-right' %>
+</div>

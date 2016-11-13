@@ -1,0 +1,1 @@
+$("[data-logical-group~=<%= params[:logical_group] %>]").find($("[data-index~=<%= @index %>]")).replaceWith("<%= j render 'condition_fields_form' %>");

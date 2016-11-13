@@ -1,0 +1,5 @@
+<%= fields_for @rule do |f| %>
+    <%= f.fields_for @logical_group, child_index: Time.current.to_i do |builder| %>
+        <%= render 'condition_fields', f: builder %>
+    <% end %>
+<% end %>

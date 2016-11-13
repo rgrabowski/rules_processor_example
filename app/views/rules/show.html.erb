@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rule.name %>
+</p>
+
+<p>
+  <strong>Meet all data:</strong>
+  <%= @rule.meet_all_data %>
+</p>
+
+<p>
+  <strong>Meet any data:</strong>
+  <%= @rule.meet_any_data %>
+</p>
+
+<p>
+  <strong>Actions data:</strong>
+  <%= @rule.actions_data %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @rule.order %>
+</p>
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>

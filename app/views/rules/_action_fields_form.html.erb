@@ -1,0 +1,5 @@
+<%= fields_for @rule do |f| %>
+    <%= f.fields_for :actions, child_index: Time.current.to_i do |builder| %>
+        <%= render 'action_fields', f: builder %>
+    <% end %>
+<% end %>

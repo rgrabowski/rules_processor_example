@@ -1,0 +1,9 @@
+<div class="form-group condition-inline-field">
+  <%= f.label :operator, class: 'sr-only' %>
+  <%= f.select :operator, rule_operator_options(f), {}, data: {behavior: 'operator-selector'}, class: 'custom-select custom-select' %>
+</div>
+
+<div class="form-group condition-inline-field">
+  <%= f.label :value, class: 'sr-only' %>
+  <%= f.text_field :value, class: 'form-control' %>
+</div>

@@ -1,4 +1,4 @@
 <div class="form-group condition-inline-field">
   <%= f.label :value, class: 'sr-only' %>
-  <%= f.select :value, options_for_select(Ticket::STATUSES), {}, data: {behavior: 'value-selector'}, class: 'custom-select custom-select' %>
+  <%= f.select :value, Ticket::STATUSES.map {|s| [s.humanize, s]}, {}, data: {behavior: 'value-selector'}, class: 'custom-select custom-select' %>
 </div>

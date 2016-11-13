@@ -19,12 +19,12 @@
 
     <div class="form-group">
       <%= f.label :status %>
-      <%= f.select :status, options_for_select(Ticket::STATUSES, selected: ticket.status),{}, class: 'select-custom form-control' %>
+      <%= f.select :status, Ticket::STATUSES.map {|p| [p.humanize, p]},{}, class: 'select-custom form-control' %>
     </div>
 
     <div class="form-group">
       <%= f.label :priority %>
-      <%= f.select :priority, options_for_select(Ticket::PRIORITIES, selected: ticket.priority),{}, class: 'custom-select form-control' %>
+      <%= f.select :priority, Ticket::PRIORITIES.map {|p| [p.humanize, p]}, {}, class: 'custom-select form-control' %>
     </div>
 
     <div class="form-group">

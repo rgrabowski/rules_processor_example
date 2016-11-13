@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rules</h1>
+<h3>Rules</h3>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Meet all data</th>
-      <th>Meet any data</th>
-      <th>Actions data</th>
       <th>Order</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -18,11 +15,7 @@
     <% @rules.each do |rule| %>
       <tr>
         <td><%= rule.name %></td>
-        <td><%= rule.meet_all_data %></td>
-        <td><%= rule.meet_any_data %></td>
-        <td><%= rule.actions_data %></td>
         <td><%= rule.order %></td>
-        <td><%= link_to 'Show', rule %></td>
         <td><%= link_to 'Edit', edit_rule_path(rule) %></td>
         <td><%= link_to 'Destroy', rule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

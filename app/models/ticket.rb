@@ -2,6 +2,8 @@ class Ticket < ApplicationRecord
   STATUSES = %w(new active pending closed)
   PRIORITIES = %w(low medium high)
 
+  belongs_to :requester, class_name: 'User'
+
   def save_and_process_rules
     save!
     process_rules

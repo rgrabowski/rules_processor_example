@@ -4,7 +4,7 @@ class RulesController < ApplicationController
   # GET /rules
   # GET /rules.json
   def index
-    @rules = Rule.all
+    @rules = Rule.all.by_order
   end
 
   # GET /rules/1
@@ -28,7 +28,7 @@ class RulesController < ApplicationController
 
     respond_to do |format|
       if @rule.save
-        format.html { redirect_to @rule, notice: 'Rule was successfully created.' }
+        format.html { redirect_to edit_rule_path(@rule), notice: 'Rule was successfully created.' }
         format.json { render :show, status: :created, location: @rule }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RulesController < ApplicationController
   def update
     respond_to do |format|
       if @rule.update(rule_params)
-        format.html { redirect_to @rule, notice: 'Rule was successfully updated.' }
+        format.html { redirect_to edit_rule_path(@rule), notice: 'Rule was successfully updated.' }
         format.json { render :show, status: :ok, location: @rule }
       else
         format.html { render :edit }

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'tickets#index'
+  resources :tickets
+  resources :users
+
   resources :rules do
     collection do
       get :add_condition_fields
@@ -7,7 +12,5 @@ Rails.application.routes.draw do
       get :handle_action_fields
     end
   end
-  resources :tickets
-  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
